@@ -1,0 +1,16 @@
+.page-title {
+    line-height: 122px;
+    font-size: 48px; 
+}
+
+.bold > a {
+  font-weight: bold;
+}
+
+nav.top-nav{
+	box-shadow: none;
+}
+
+.grande{
+	font-size: 2rem;
+}
