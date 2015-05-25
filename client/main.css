@@ -1,0 +1,32 @@
+.page-title {
+    line-height: 122px;
+    font-size: 48px; 
+}
+
+.bold > a {
+  font-weight: bold;
+}
+
+nav.top-nav{
+	box-shadow: none;
+}
+
+.grande{
+	font-size: 2rem;
+}
+
+nav ul#mobileNavBar.side-nav li.bold:hover{
+	background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+li.no-padding{
+	background-color: transparent !important;
+}
+
+.side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active{
+	background-color: #00bcd4;
+}
+
+.side-nav li:hover, .side-nav li.active {
+ 	background-color: rgba(0, 0, 0, 0.05);
+}
