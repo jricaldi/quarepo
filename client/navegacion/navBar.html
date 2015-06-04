@@ -1,32 +1,38 @@
 <template name="navBar">
-	<nav class="cyan top-nav">
-		<div class="nav-wrapper">
-			<a href="#" class="brand-logo left mdi-communication-dialpad">Quarepo</a>
-			<a href="#" data-activates="mobileNavBar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	<div class="cyan">
+		<div class="container">
+			<nav class="cyan top-nav">
 
-			<ul class="right hide-on-med-and-down">
-				<li><a class="dropdown-button" href="#!" data-activates="ulGuia">Guía Rápida<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-				<li><a class="dropdown-button" href="#!" data-activates="ulRepositorios">Repositorios<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-				<li><a class="dropdown-button" href="#!" data-activates="ulColaboradores">Colaboradores<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-				<ul id="ulGuia" class="dropdown-content">
-					<li><a href="#!">Correos</a></li>
-					<li><a href="#!">Procesos</a></li>
-					<li><a href="#!">Conocimiento</a></li>
-				</ul>
-				<ul id="ulRepositorios" class="dropdown-content">
-					<li><a href="#!">Servicios</a></li>
-					<li><a href="#!">Base de datos</a></li>
-					<li><a href="#!">Consolas</a></li>
-				</ul>
-				<ul id="ulColaboradores" class="dropdown-content">
-					<li><a href="#!">Claro</a></li>
-					<li><a href="#!">IBM</a></li>
-				</ul>
-			</ul>
-			<!--SIDEBAR-->
-			{{> sideBar}}
-			<!--SIDEBAR-->
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo left"><i id="logoQuarepo" class="mdi-communication-dialpad left"></i>Quarepo</a>
+					<a href="#" data-activates="mobileNavBar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+					<ul class="right hide-on-med-and-down">
+						<li><a class="dropdown-button" href="#!" data-activates="ulGuia">Guía Rápida<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="ulRepositorios">Repositorios<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+						<li><a class="dropdown-button" href="#!" data-activates="ulColaboradores">Colaboradores<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+						<li><a href="#" id="lnkAyuda" class=" waves-effect waves-green waves-ripple">Ayuda</a></li>
+						<ul id="ulGuia" 	class="dropdown-content">
+							<li><a href="#!">Correos</a></li>
+							<li><a href="#!">Procesos</a></li>
+							<li><a href="#!">Conocimiento</a></li>
+						</ul>
+						<ul id="ulRepositorios" class="dropdown-content">
+							<li><a href="#!">Servicios</a></li>
+							<li><a href="#!">Base de datos</a></li>
+							<li><a href="#!">Consolas</a></li>
+						</ul>
+						<ul id="ulColaboradores" class="dropdown-content">
+							<li><a href="#!">Claro</a></li>
+							<li><a href="#!">IBM</a></li>
+						</ul>
+					</ul>
+
+					<!--SIDEBAR-->
+					{{> sideBar}}
+					<!--SIDEBAR-->
+				</div>
+			</nav>
 		</div>
-	</nav>
-
+	</div>
 </template>

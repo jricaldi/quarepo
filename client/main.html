@@ -1,14 +1,38 @@
 <head>
-<title>Quarepo</title>
+	<title>Quarepo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
-	<div class="cyan">
+
+</body>
+
+<template name="mainLayout">
+	<header>
+		{{> yield "navBarYield"}}
+	</header>
+	<main>
 		<div class="container">
-		<!--navBar-->
-			{{> navBar}}
-		<!--navBar-->
+			{{> yield}}
+		</div>
+	</main>
+</template>
+
+<template name="home">
+	<div class="row">
+		<div class="col s12">
+			<div class="card-panel teal">
+				<span class="white-text">
+					Quarepo es un sistema que te ayudará a encontrar toda la información que se utiliza
+					en el equipo de Integración.<br/>
+					Estos son nuestro carismaticos integrantes:<br/><br/>
+				</span>
+				<span class="yellow-text">
+					Jorge Ricaldi <br/>
+					Paul Reyes <br/>
+					Carlos Naveda <br/>
+				</span>
+			</div>
 		</div>
 	</div>
-</body>
+</template>

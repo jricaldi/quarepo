@@ -9,3 +9,4 @@ autopublish
 insecure
 materialize:materialize
 mquandalle:jade
+iron:router
