@@ -1,1 +1,5 @@
-//codigo javascript para la raiz html.
+Template.loading.helpers({
+  titulo: function(){
+    return Session.get("tituloPagina");
+  }
+});

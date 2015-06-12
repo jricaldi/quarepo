@@ -1,36 +1,25 @@
-Router.configure({
-  layoutTemplate: 'mainLayout'
-});
-
-// Router.route('/', function(){
-//   this.render("home");
-//   this.render('navBar', {to: 'navBarYield'});
-// });
-
-Router.route('/', {
-  template:'home',
+PrincipalController = RouteController.extend({
+  layoutTemplate: 'mainLayout',
   yieldRegions: {
-    'navBar': {to:'navBarYield'}
-  },
-  onAfterAction: function () {
-    console.log("onAfterAction");
-    // $(document).on("ready",function(){
-    //   $(".button-collapse").sideNav(function(){console.log("navBar activo");});
-    // });
-  },
-  action:function() {
-    this.render();
-  }
+   'navBar': {to: 'navBarYield'}
+ },
+ action: function () {
+   this.render()
+ }
 });
 
-// Router.route('/', function(){
-//   this.render("home", {
-//     yieldTemplates: {
-//         'narBar': {to:'navBarYield'}
-//       }
-//   });
-// });
+Router.configure({
+  controller: 'PrincipalController'
+});
 
-Router.route('/colaboradoresClaro', function () {
-  this.render('colClaro');
+Router.route('/',{
+  name:'home'
+});
+
+Router.route('/colaboradoresClaro',{
+  name:'colClaro',
+  loadingTemplate: 'loading',
+  waitOn: function () {
+      return Meteor.subscribe('listarColClaro');
+  }
 });

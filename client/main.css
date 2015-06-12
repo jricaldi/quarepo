@@ -44,3 +44,7 @@ li.no-padding{
 i#logoQuarepo.left {
   margin-right: 0 !important;
 }
+
+.header{
+  font-weight: 300;
+}
