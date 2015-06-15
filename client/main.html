@@ -2,9 +2,7 @@
 	<title>Quarepo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-
 <body>
-
 </body>
 
 <template name="mainLayout">
@@ -13,6 +11,11 @@
 	</header>
 	<main>
 		<div class="container">
+			<div class="row sinMargen">
+				<div class="col s12">
+					<h2 class="cyan-text text-darken-2 header">{{titulo}}</h2>
+				</div>
+			</div>
 			{{> yield}}
 		</div>
 	</main>
@@ -21,16 +24,14 @@
 <template name="home">
 	<div class="row">
 		<div class="col s12">
-			<div class="card-panel cyan darken-2">
+			<div class="card-panel cyan darken-1">
 				<span class="white-text">
 					Quarepo es un sistema que te ayudará a encontrar toda la información que se utiliza
 					en el equipo de Integración.<br/>
+					Estos son nuestro carismaticos integrantes:
 				</span>
 			</div>
-			<span>Estos son nuestro carismaticos integrantes:<br/><br/></span>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col s12 m3 l2">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light">
@@ -51,15 +52,22 @@
 
 
 <template name="loading">
-	<div class="row">
-		<div class="col s12">
-			<div class="valign-wrapper">
-				<h5 class="valign">{{titulo}}</h5>
-			</div>
-		</div>
+	<div class="row mt400">
 		<div class="col s8 offset-s2">
 			<div class="progress">
 				<div class="indeterminate"></div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="sinDatos">
+	<div class="row">
+		<div class="col s12">
+			<div class="card-panel yellow">
+				<span class="cyan-text text-darken-2">
+					<i class="mdi-alert-warning">No se encontró información al respecto.</i>
+				</span>
 			</div>
 		</div>
 	</div>

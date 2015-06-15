@@ -1,10 +1,10 @@
 <template name="navBar">
-	<div class="cyan">
+	<div class="cyan darken-2">
 		<div class="container">
-			<nav class="cyan top-nav">
+			<nav class="cyan darken-2 top-nav">
 
 				<div class="nav-wrapper">
-					<a href="#" class="brand-logo left"><i id="logoQuarepo" class="mdi-communication-dialpad left"></i>Quarepo</a>
+					<a href="{{pathFor route='home'}}" class="brand-logo left"><i id="logoQuarepo" class="mdi-communication-dialpad left"></i>Quarepo</a>
 					<a href="#" data-activates="mobileNavBar" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
 					<ul class="right hide-on-med-and-down">
@@ -23,7 +23,7 @@
 							<li><a href="#!">Consolas</a></li>
 						</ul>
 						<ul id="ulColaboradores" class="dropdown-content">
-							<li><a id="lnkColClaro" href="{{pathFor route='colClaro'}}">Claro</a></li>
+							<li><a id="lnkColClaro" href="{{pathFor route='colClaro.list'}}">Claro</a></li>
 							<li><a href="#!">IBM</a></li>
 						</ul>
 					</ul>

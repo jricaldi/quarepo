@@ -3,7 +3,7 @@ Template.sideBar.rendered = function(){
 }
 
 Template.sideBar.events({
-  "click a#lnkColClaroSb" : function(event,template){
-    Session.set("tituloPagina", "Colaboradores Claro");
+  "click ul li.bold ul>li>a": function(event, template){
+    $('.button-collapse').sideNav('hide');
   }
 });

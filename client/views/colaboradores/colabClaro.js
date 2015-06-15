@@ -1,9 +1,9 @@
-Template.colClaro.helpers({
+Template.colClaroList.helpers({
   titulo: function(){
     return Session.get("tituloPagina");
   }
 });
 
-Template.colClaro.rendered = function(){
+Template.colClaroList.rendered = function(){
   $('.button-collapse').sideNav('hide');
 }

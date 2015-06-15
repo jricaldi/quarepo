@@ -1,4 +1,4 @@
-Template.loading.helpers({
+Template.mainLayout.helpers({
   titulo: function(){
     return Session.get("tituloPagina");
   }

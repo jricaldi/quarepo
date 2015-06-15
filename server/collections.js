@@ -1,4 +1,4 @@
-ColaboradoresClaro.allow({
+Colaboradores.allow({
   insert: function(){
     return true;
   },

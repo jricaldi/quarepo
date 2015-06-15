@@ -10,7 +10,7 @@ Template.navBar.events({
     Materialize.toast(spanText, 5000,'rounded')
   },
 
-  "click a#lnkColClaro" : function(event,template){
-    Session.set("tituloPagina", "Colaboradores Claro");
-  }
+  // "click a#lnkColClaro" : function(event,template){
+  //   Session.set("tituloPagina", "Colaboradores Claro");
+  // }
 });

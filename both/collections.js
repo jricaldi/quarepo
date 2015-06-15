@@ -1,1 +1,1 @@
-ColaboradoresClaro = new Mongo.Collection("colaboradoresClaro");
+Colaboradores = new Mongo.Collection("colaboradores");

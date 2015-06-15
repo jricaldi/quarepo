@@ -48,3 +48,12 @@ i#logoQuarepo.left {
 .header{
   font-weight: 300;
 }
+
+.sinMargen{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt400{
+  margin-top: 100px;
+}
