@@ -49,11 +49,24 @@ i#logoQuarepo.left {
   font-weight: 300;
 }
 
-.sinMargen{
-  margin-top: 0;
-  margin-bottom: 0;
+.sinMargenTB{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.sinMargenLR{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .mt400{
   margin-top: 100px;
+}
+
+.mt40{
+  margin-top: 40px;
+}
+
+.hide{
+  display: none;
 }

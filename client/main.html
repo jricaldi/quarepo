@@ -11,10 +11,18 @@
 	</header>
 	<main>
 		<div class="container">
-			<div class="row sinMargen">
+			<div class="row sinMargenTB">
 				<div class="col s12">
 					<h2 class="cyan-text text-darken-2 header">{{titulo}}</h2>
 				</div>
+				<div class="col s12 mt40 {{show}}">
+					<button class="btn waves-effect waves-light modal-trigger" data-target="crearNuevo">Añadir nuevo
+						<i class="mdi-content-add left sinMargenLR"></i>
+					</button>
+				</div>
+			</div>
+			<div id="sectionModal" class="">
+
 			</div>
 			{{> yield}}
 		</div>

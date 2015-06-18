@@ -1,37 +1,44 @@
 <template name="colClaroNew">
-	<div class="row">
-		<form class="col s12">
+	<div id="crearNuevo" class="modal modal-fixed-footer">
+		<div class="modal-content">
 			<div class="row">
-				<div class="input-field col s12">
-					<input id="last_name" type="text" class="validate">
-					<label for="last_name">Nombres y Apellidos</label>
-				</div>
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="txtNombre" type="text" class="validate">
+							<label for="txtNombre">Nombres y Apellidos</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="txtRol" type="text" class="validate">
+							<label for="txtRol">Rol</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="txtCelular" type="number" class="validate">
+							<label for="txtCelular">Celular</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="txtEmail" type="email" class="validate">
+							<label for="txtEmail">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="txtEmpresa" type="text" class="validate" value="Claro">
+							<label for="txtEmpresa" class="active">Empresa</label>
+						</div>
+					</div>
+				</form>
 			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="last_name" type="text" class="validate">
-					<label for="last_name">Rol</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="last_name" type="number" class="validate">
-					<label for="last_name">Celular</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="last_name" type="email" class="validate">
-					<label for="last_name">Email</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="last_name" type="text" class="validate" value="Claro">
-					<label for="last_name">Empresa</label>
-				</div>
-			</div>
-		</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+		</div>
 	</div>
 </template>
 

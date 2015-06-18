@@ -13,10 +13,15 @@ Router.configure({
   loadingTemplate: 'loading',
   onBeforeAction : function(){
     //validación si esta logeado
-    Session.set("tituloPagina", TITLE[Router.current().route.getName()]);
     this.next();
   },
-  notFoundTemplate: 'sinDatos'
+  notFoundTemplate: 'sinDatos',
+  waitOn:function(){
+    var ruta = Router.current().route.getName();
+    Session.set("tituloPagina", TITLE[ruta]);
+    Session.set("rutaPagina",ruta)
+    Session.set("noDatos", "hide");
+  }
 });
 
 Router.onBeforeAction('dataNotFound');

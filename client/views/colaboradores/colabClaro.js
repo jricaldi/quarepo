@@ -1,9 +1,5 @@
-Template.colClaroList.helpers({
-  titulo: function(){
-    return Session.get("tituloPagina");
+Template.colClaroNew.events({
+  "keypress #txtCelular": function(event, template){
+    return helpOnlyNumbers(event);
   }
 });
-
-Template.colClaroList.rendered = function(){
-  $('.button-collapse').sideNav('hide');
-}
