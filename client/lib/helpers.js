@@ -7,12 +7,12 @@ helpMongoData = function(doc){
   }
 }
 
-helpGetModalTemplate = function(ruta){
-  switch (ruta) {
-    case "colClaro.list":
-    return Template.colClaroNew;
-  }
-}
+// helpGetModalTemplate = function(ruta){
+//   switch (ruta) {
+//     case "colClaro":
+//     return Template.colClaroNew;
+//   }
+// }
 
 helpOnlyNumbers = function(evt){
   var charCode = (evt.which) ? evt.which : event.keyCode

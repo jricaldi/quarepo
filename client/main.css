@@ -67,6 +67,44 @@ i#logoQuarepo.left {
   margin-top: 40px;
 }
 
+.mt20{
+  margin-top: 20px;
+}
+
 .hide{
   display: none;
+}
+
+.mb50{
+  margin-bottom: 50px;
+}
+
+.transitioner {
+  overflow: visible;
+}
+
+.dropdown-button > i.right {
+  margin-left: 0px;
+}
+
+.nav-wrapper ul li>a.combo{
+  padding: 0 0 0 10px;
+}
+
+.truncate {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn{
+  text-transform: none !important;
+}
+
+.dropdown-content{
+  min-width: 140px !important;
+}
+
+.input-field{
+  margin-top : 0px;
 }

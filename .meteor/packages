@@ -7,3 +7,4 @@
 meteor-platform
 materialize:materialize
 iron:router
+ccorcos:transitioner

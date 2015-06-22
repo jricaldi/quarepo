@@ -5,7 +5,9 @@ blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
+ccorcos:transitioner@2.0.1
 check@1.0.5
+coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
@@ -51,5 +53,6 @@ tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
+velocityjs:velocityjs@1.2.1
 webapp@1.2.0
 webapp-hashing@1.0.3
