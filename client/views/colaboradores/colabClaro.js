@@ -3,3 +3,8 @@ Template.colClaroNew.events({
     return helpOnlyNumbers(event);
   }
 });
+
+Template.colClaroNew.onRendered(function(){
+  console.log($(window).width());
+  console.log($(document).width());
+});
