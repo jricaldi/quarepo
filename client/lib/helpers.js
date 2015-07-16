@@ -21,3 +21,9 @@ helpOnlyNumbers = function(evt){
   }
   return false;
 }
+
+
+  $("#sidenav-overlay").click(function(event){
+    event.stopImmediatePropagation();
+    console.log("aqui estoy!");
+  });

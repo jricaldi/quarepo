@@ -18,9 +18,48 @@
 					</div>
 				</div>
 			</div>
+			<a id="btnShowPerfil" class="btn-floating btn-large teal" data-activates="perfilSideNav">
+				<i class="large material-icons">perm_identity</i>
+			</a>
 			{{#transitioner}}
-				{{> yield}}
+			{{> yield}}
 			{{/transitioner}}
+			<ul id="perfilSideNav" class="side-nav">
+				<li class="no-padding">
+					<ul class="collapsible collapsible-accordion">
+						<li class="bold">
+							<a class="collapsible-header waves-effect waves-teal">Guía Rápida</a>
+							<div class="collapsible-body">
+								<ul>
+									<li><a href="#!">Correos</a></li>
+									<li><a href="#!">Procesos</a></li>
+									<li><a href="#!">Conocimiento</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bold">
+							<a class="collapsible-header waves-effect waves-teal">Repositorios</a>
+							<div class="collapsible-body">
+								<ul>
+									<li><a href="#!">Servicios</a></li>
+									<li><a href="#!">Base de datos</a></li>
+									<li><a href="#!">Consolas</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="bold">
+							<a class="collapsible-header waves-effect waves-teal">Colaboradores</a>
+							<div class="collapsible-body">
+								<ul>
+									<!-- <li><a href="#!">Claro</a></li> -->
+									<li><a href="{{pathFor route='colClaro'}}">Claro</a></li>
+									<li><a href="#!">IBM</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</main>
 </template>

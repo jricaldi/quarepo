@@ -22,3 +22,10 @@ Template.mainLayout.helpers({
 //   var ruta = Session.get("rutaPagina");
 //   Blaze.render(helpGetModalTemplate(ruta), self.find("div#sectionModal"));
 // });
+Template.mainLayout.onRendered(function(){
+  $('#btnShowPerfil').sideNav({
+     edge: 'right',
+     closeOnClick: true
+   }
+ );
+});
