@@ -10,3 +10,10 @@ Template.sideBar.events({
   //   $('.button-collapse').sideNav('hide');
   // }
 });
+
+Template.sideBar.onRendered(function(){
+
+  $('.collapsible').collapsible();
+
+
+});

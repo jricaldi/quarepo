@@ -16,8 +16,8 @@ Template.mainLayout.helpers({
 //   }
 // });
 
-
 Template.mainLayout.onRendered(function(){
   $(".collapsible").collapsible();
   $(".dropdown-button").dropdown();
+
 });
