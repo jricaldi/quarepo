@@ -1,7 +1,8 @@
 PrincipalController = RouteController.extend({
   layoutTemplate: 'mainLayout',
   yieldRegions: {
-    'navBar': {to: 'navBarYield'}
+    'navBar': {to: 'navBarYield'},
+    'perfilSideNav':{to: 'perfilSideNavYield'}
   },
   action: function () {
     this.render()
@@ -15,7 +16,7 @@ Router.configure({
     //validación si esta logeado
     this.next();
   },
-  notFoundTemplate: 'sinDatos',
+  notFoundTemplate: 'noTemplate',
   waitOn:function(){
     var ruta = Router.current().route.getName();
     Session.set("tituloPagina", TITLE[ruta]);
@@ -24,7 +25,8 @@ Router.configure({
   }
 });
 
-Router.onBeforeAction('dataNotFound');
+// Router.onBeforeAction('dataNotFound');
+Router.plugin('dataNotFound', {notFoundTemplate: 'sinDatos'});
 
 Router.route('/',{
   name:'home'

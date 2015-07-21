@@ -19,61 +19,13 @@
 				</div>
 			</div>
 			{{#transitioner}}
-				{{> yield}}
+			{{> yield}}
 			{{/transitioner}}
+			<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+				<a id="btnShowPerfil" class="btn-floating btn-large teal" data-activates="perfilSideNav">
+					<i class="large material-icons">perm_identity</i>
+				</a>
+			</div>
 		</div>
 	</main>
-</template>
-
-<template name="home">
-	<div class="row">
-		<div class="col s12">
-			<div class="card-panel cyan darken-1">
-				<span class="white-text">
-					Quarepo es un sistema que te ayudará a encontrar toda la información que se utiliza
-					en el equipo de Integración.<br/>
-					Estos son nuestro carismaticos integrantes:
-				</span>
-			</div>
-		</div>
-		<div class="col s12 m3 l2">
-			<div class="card">
-				<div class="card-image waves-effect waves-block waves-light">
-					<img class="responsive-img" src="http://placehold.it/100x150">
-				</div>
-				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
-					<p><a href="#">Jorge Ricaldi</a></p>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">Jorge Ricaldi<i class="mdi-navigation-close right"></i></span>
-					<p>De: Chiclayo</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</template>
-
-
-<template name="loading">
-	<div class="row mt400">
-		<div class="col s8 offset-s2">
-			<div class="progress">
-				<div class="indeterminate"></div>
-			</div>
-		</div>
-	</div>
-</template>
-
-<template name="sinDatos">
-	<div class="row">
-		{{> nuevoElemento}}
-		<div class="col s12">
-			<div class="card-panel yellow">
-				<span class="cyan-text text-darken-2">
-					<i class="mdi-alert-warning"><span>No se encontró información al respecto.</span></i>
-				</span>
-			</div>
-		</div>
-	</div>
 </template>

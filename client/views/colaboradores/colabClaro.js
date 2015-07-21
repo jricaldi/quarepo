@@ -5,6 +5,6 @@ Template.colClaroNew.events({
 });
 
 Template.colClaroNew.onRendered(function(){
-  console.log($(window).width());
-  console.log($(document).width());
+  // console.log($(window).width());
+  // console.log($(document).width());
 });

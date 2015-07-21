@@ -17,8 +17,7 @@ Template.mainLayout.helpers({
 // });
 
 
-// Template.mainLayout.onRendered(function(){
-//   var self = this;
-//   var ruta = Session.get("rutaPagina");
-//   Blaze.render(helpGetModalTemplate(ruta), self.find("div#sectionModal"));
-// });
+Template.mainLayout.onRendered(function(){
+  $(".collapsible").collapsible();
+  $(".dropdown-button").dropdown();
+});
