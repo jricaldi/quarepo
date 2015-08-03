@@ -1,0 +1,1 @@
+Colaboradores.attachSchema(Esquemas.colaboradores);

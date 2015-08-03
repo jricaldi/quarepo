@@ -1,20 +1,24 @@
 Template.mainLayout.helpers({
   titulo: function(){
     return Session.get("tituloPagina");
+  },
+  esError : function(){
+    if (Session.equals("status", undefined))
+      return "hide"
+    if (Session.equals("status", CONSTANTE.error))
+      return "red-text";
+    return "teal-text";
+  },
+  mensaje : function(){
+    return Session.get("mensaje");
   }
-  // show: function(){
-  //   if (!Session.equals("rutaPagina", "home")){
-  //     Session.set("noDatos", "");
-  //   }
-  //   return Session.get("noDatos");
-  // }
 });
 
-// Template.mainLayout.events({
-//   "click button.modal-trigger": function(event, template){
-//     $('div#crearNuevo').openModal();
-//   }
-// });
+Template.mainLayout.events({
+  "click #btnShowPerfil": function(event, template){
+    Router.go(CONSTANTE.perfil);
+  }
+});
 
 Template.mainLayout.onRendered(function(){
   $(".collapsible").collapsible();

@@ -1,4 +1,4 @@
-Template.perfilSideNav.onRendered(function(){
+Template.perfil.onRendered(function(){
  //  $('#btnShowPerfil').sideNav({
  //     edge: 'right',
  //     closeOnClick: true

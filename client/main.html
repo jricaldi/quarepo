@@ -18,16 +18,21 @@
 					</div>
 				</div>
 			</div>
-			<a id="btnShowPerfil" class="btn-floating btn-large teal" data-activates="perfilSideNav">
-				<i class="large material-icons">perm_identity</i>
-			</a>
 			{{#transitioner}}
 			{{> yield}}
 			{{/transitioner}}
-			<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-				<a id="btnShowPerfil" class="btn-floating btn-large teal" data-activates="perfilSideNav">
-					<i class="large material-icons">perm_identity</i>
+			<div class="fixed-action-btn hide-on-small-only" style="bottom: 45px; right: 24px;">
+				<a id="btnShowPerfil" class="btn-floating btn-large teal">
+					<i class="material-icons">perm_identity</i>
 				</a>
+			</div>
+			<div class="fixed-action-btn mensajeBox {{esError}}"> 
+				<div class="valign-wrapper">
+					<i class="material-icons small">warning</i>
+					<span>
+						{{mensaje}}
+					</span>
+				</div>
 			</div>
 		</div>
 	</main>

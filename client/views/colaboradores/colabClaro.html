@@ -27,7 +27,7 @@
 					<label for="txtEmpresa" class="active">Empresa</label>
 				</div>
 			</div>
-			<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+			<button id="submit" class="btn waves-effect waves-light" type="submit">Submit
 				<i class="material-icons right">send</i>
 			</button>
 		</form>
@@ -37,8 +37,8 @@
 <template name="colClaro">
 	<div class="row">
 		{{> nuevoElemento}}
-		<div class="col s12">
-			<table class="responsive-table">
+		<div class="col s12 mt20">
+			<table class="responsive-table striped">
 				<thead>
 					<tr>
 						<th data-field="nombre">Nombre</th>

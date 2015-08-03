@@ -1,8 +1,7 @@
 PrincipalController = RouteController.extend({
   layoutTemplate: 'mainLayout',
   yieldRegions: {
-    'navBar': {to: 'navBarYield'},
-    'perfilSideNav':{to: 'perfilSideNavYield'}
+    'navBar': {to: 'navBarYield'}
   },
   action: function () {
     this.render()

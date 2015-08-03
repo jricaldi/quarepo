@@ -9,7 +9,7 @@
 						<li><a class="dropdown-button combo" href="#!" data-activates="ulGuia">Guía Rápida<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
 						<li><a class="dropdown-button combo" href="#!" data-activates="ulRepositorios">Repositorios<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
 						<li><a class="dropdown-button combo" href="#!" data-activates="ulColaboradores">Colaboradores<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-						<li><a href="#" id="lnkAyuda" class="combo waves-effect waves-green waves-ripple">Ayuda</a></li>
+						<li><a class="dropdown-button combo" href="#!" data-activates="ulMantenimiento">Mantenimiento<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
 						<ul id="ulGuia" 	class="dropdown-content">
 							<li><a href="#!">Correos</a></li>
 							<li><a href="#!">Procesos</a></li>
@@ -21,8 +21,12 @@
 							<li><a href="#!">Consolas</a></li>
 						</ul>
 						<ul id="ulColaboradores" class="dropdown-content">
-							<li><a id="lnkColClaro" href="{{pathFor route='colClaro'}}">Claro</a></li>
+							<li><a href="{{pathFor route='colClaro'}}">Claro</a></li>
 							<li><a href="#!">IBM</a></li>
+						</ul>
+						<ul id="ulMantenimiento" class="dropdown-content">
+							<li><a href="{{pathFor route='perfil'}}">Perfil</a></li>
+							<li><a href="#!">Datos</a></li>
 						</ul>
 					</ul>
 

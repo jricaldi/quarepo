@@ -149,3 +149,11 @@ ul.noRadius>li>a {
   width: 100px;
   right: 30px;
 }
+
+.mensajeBox{
+  bottom: 0px;
+  left: 10px;
+  padding-bottom:20px;
+  background-color:white;
+  width: 90%;
+}

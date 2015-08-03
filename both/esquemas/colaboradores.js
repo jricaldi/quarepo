@@ -1,6 +1,4 @@
-var Schemas = {};
-
-Schemas.colaboradores = new SimpleSchema({
+Esquemas.colaboradores = new SimpleSchema({
     nombre: {
         type: String,
         label: "Nombre",
@@ -11,7 +9,7 @@ Schemas.colaboradores = new SimpleSchema({
         label: "Rol"
     },
     celular: {
-        type: Number,
+        type: String,
         label: "Celular",
         min: 7,
         max:10
@@ -26,5 +24,10 @@ Schemas.colaboradores = new SimpleSchema({
         type: String,
         label: "Empresa",
         max: 25
+    },
+    tipo:{
+      type: String,
+      label: "Tipo Colaborador(IBM o Claro)",
+      max: 25
     }
 });

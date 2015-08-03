@@ -4,7 +4,10 @@ Router.route('/colaboradoresClaro',{
     return Meteor.subscribe('listarColClaro');
   },
   data : function(){
-    return helpMongoData(Colaboradores.find({tipo:"claro"}));
+    var datos = helpMongoData(Colaboradores.find({tipo:"claro"}));
+    if(datos!=null)
+      return {personas: datos};
+    return datos;
   }
 });
 

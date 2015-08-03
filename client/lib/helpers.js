@@ -21,3 +21,8 @@ helpOnlyNumbers = function(evt){
   }
   return false;
 }
+
+helpSetStatusMsg = function(status,mensaje){
+  Session.set("status", status);
+  Session.set("mensaje",mensaje);
+}
