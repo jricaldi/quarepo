@@ -9,10 +9,10 @@ Template.colClaroNew.events({
     colClaro.rol = t.$("#txtRol").val();
     colClaro.celular = t.$("#txtCelular").val();
     colClaro.email = t.$("#txtEmail").val();
-    colClaro.empresa = t.$("#txtEmpresa").val();
+    // colClaro.empresa = t.$("#txtEmpresa").val();
     colClaro.tipo = CONSTANTE.claro;
     Meteor.call("insertarColClaro",colClaro,function(error,result){
-      if (error)
+      if (result == CONSTANTE.error)
         helpSetStatusMsg(CONSTANTE.error,MENSAJES.insertarColClaro_ERROR);
       else
         helpSetStatusMsg(CONSTANTE.ok,MENSAJES.insertarColClaro_OK);
