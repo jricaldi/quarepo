@@ -11,8 +11,8 @@ Esquemas.colaboradores = new SimpleSchema({
     celular: {
         type: String,
         label: "Celular",
-        min: 7,
-        max:10
+        min: 9,
+        max:9
     },
     email: {
         type: String,
