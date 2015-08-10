@@ -71,12 +71,20 @@ i#logoQuarepo.left {
   margin-top: 20px;
 }
 
+.mb20{
+  margin-bottom: 20px;
+}
+
 .hide{
   display: none;
 }
 
 .mb50{
   margin-bottom: 50px;
+}
+
+.pb70{
+  padding-bottom: 70px !important;
 }
 
 .transitioner {
@@ -152,8 +160,26 @@ ul.noRadius>li>a {
 
 .mensajeBox{
   bottom: 0px;
-  left: 10px;
-  padding-bottom:20px;
-  background-color:white;
-  width: 90%;
+  left: 0px;
+  padding-bottom: 20px;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 66px;
+  padding-left: 20px;
+  border-top: 1px solid teal;
+  z-index: 990;
+}
+
+.perfilButton{
+  bottom: 6px;
+  right: 25px;
+  z-index: 991;
+}
+
+.esconder{
+  visibility: hidden;
+}
+
+.borderError{
+  border-top: 1px solid red;
 }

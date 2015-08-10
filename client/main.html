@@ -21,14 +21,14 @@
 			{{#transitioner}}
 			{{> yield}}
 			{{/transitioner}}
-			<div class="fixed-action-btn hide-on-small-only" style="bottom: 45px; right: 24px;">
+			<div class="fixed-action-btn hide-on-small-only perfilButton">
 				<a id="btnShowPerfil" class="btn-floating btn-large teal">
 					<i class="material-icons">perm_identity</i>
 				</a>
 			</div>
-			<div class="fixed-action-btn mensajeBox {{esError}}"> 
+			<div class="fixed-action-btn mensajeBox {{esError}}">
 				<div class="valign-wrapper">
-					<i class="material-icons small">warning</i>
+					<i class="material-icons small {{hideIcon}}">warning</i>
 					<span>
 						{{mensaje}}
 					</span>

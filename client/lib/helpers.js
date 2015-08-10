@@ -5,7 +5,7 @@ helpMongoData = function(doc){
   else {
     return doc;
   }
-}
+};
 
 // helpGetModalTemplate = function(ruta){
 //   switch (ruta) {
@@ -20,9 +20,9 @@ helpOnlyNumbers = function(evt){
     return true;
   }
   return false;
-}
+};
 
 helpSetStatusMsg = function(status,mensaje){
   Session.set("status", status);
   Session.set("mensaje",mensaje);
-}
+};

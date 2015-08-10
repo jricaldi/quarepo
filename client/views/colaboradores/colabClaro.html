@@ -13,7 +13,7 @@
 					<label for="txtRol">Rol</label>
 				</div>
 				<div class="input-field col l3 s12 m4">
-					<input id="txtCelular" type="number" class="validate" maxlength="9" required>
+					<input id="txtCelular" type="number" class="valid  ate" maxlength="9" required>
 					<label for="txtCelular">Celular</label>
 				</div>
 			</div>
@@ -37,7 +37,20 @@
 <template name="colClaro">
 	<div class="row">
 		{{> nuevoElemento}}
-		<div class="col s12 mt20">
+		<div class="col l2 m3 s4">
+			<select class="browser-default" id="selRolColClaro">
+	      <option value="0" selected>Todo</option>
+	      <option value="1">Funcional</option>
+	      <option value="2">Desarrollador</option>
+	      <option value="3">Lider QA</option>
+				<option value="4">Usuario</option>
+				<option value="5">SOAP</option>
+	    </select>
+		</div>
+		<div class="col l10 m9 s8">
+			<input type="text" id="txtBuscar" placeholder="Buscar por nombre, celular, email, etc">
+		</div>
+		<div class="col s12 pb70">
 			<table class="responsive-table striped">
 				<thead>
 					<tr>

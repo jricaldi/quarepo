@@ -3,15 +3,18 @@ Template.mainLayout.helpers({
     return Session.get("tituloPagina");
   },
   esError : function(){
-    if (Session.equals("status", undefined))
-      return "hide"
     if (Session.equals("status", CONSTANTE.error))
-      return "red-text";
+      return "red-text borderError";
     return "teal-text";
   },
   mensaje : function(){
     return Session.get("mensaje");
+  },
+  hideIcon : function(){
+    if (Session.equals("status", undefined))
+      return "esconder"
   }
+
 });
 
 Template.mainLayout.events({

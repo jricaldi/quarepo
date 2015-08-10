@@ -20,6 +20,8 @@ Router.configure({
     var ruta = Router.current().route.getName();
     Session.set("tituloPagina", TITLE[ruta]);
     Session.set("rutaPagina",ruta)
+    Session.set("txtBuscar", CONSTANTE.todo);
+
     // Session.set("noDatos", "hide");
   }
 });
