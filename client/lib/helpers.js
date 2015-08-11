@@ -26,3 +26,14 @@ helpSetStatusMsg = function(status,mensaje){
   Session.set("status", status);
   Session.set("mensaje",mensaje);
 };
+
+
+helpSetViewMantDatos = function(input){
+  switch (input) {
+    case 1:
+      Session.set("mant_datos_tipoRol", CONSTANTE.datosTipoRol);
+      break;
+    case 2:
+      Session.set("mant_datos_tipoRol", "noTemplate");
+  }
+}

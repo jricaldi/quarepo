@@ -1,0 +1,17 @@
+<template name="datos">
+  <div class="row">
+    <div class="col l2 m2 s3">
+      <label>Tipo Rol</label>
+      <select class="browser-default" id="selDatos">
+        <option value="1" selected>Tipo Rol</option>
+        <option value="2">Servidores</option>
+      </select>
+    </div>
+    <div class="col l10 m10 s9">
+      &nbsp;
+    </div>
+    <div class="col s12">
+      {{> Template.dynamic template=nombreTemplate}}
+    </div>
+  </div>
+</template>

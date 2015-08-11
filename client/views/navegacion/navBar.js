@@ -1,5 +1,8 @@
 Template.navBar.onRendered(function(){
-
+	this.$('#btnMenuPrincipal').sideNav({
+		edge: 'left',
+		closeOnClick: true
+	});
 });
 
 
@@ -10,8 +13,8 @@ Template.navBar.onRendered(function(){
 // 		Materialize.toast(spanText, 5000,'rounded')
 // 	}
 
-	// "click div#sidenav-overlay" : function(event,template){
-	//     event.stopPropagation();
-	//     console.log("clic en el overlay");
- //  	}
+// "click div#sidenav-overlay" : function(event,template){
+//     event.stopPropagation();
+//     console.log("clic en el overlay");
+//  	}
 // });

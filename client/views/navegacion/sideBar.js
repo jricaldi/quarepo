@@ -1,19 +1,9 @@
 Template.sideBar.onRendered(function(){
-  $('#btnMenuPrincipal').sideNav({
-     edge: 'left',
-     closeOnClick: true
-  });
+  this.$('.collapsible').collapsible();
 });
 
 Template.sideBar.events({
   // "click ul li.bold ul>li>a": function(event, template){
   //   $('.button-collapse').sideNav('hide');
   // }
-});
-
-Template.sideBar.onRendered(function(){
-
-  $('.collapsible').collapsible();
-
-
 });

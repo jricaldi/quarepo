@@ -38,8 +38,9 @@
 	<div class="row">
 		{{> nuevoElemento}}
 		<div class="col l2 m3 s4">
+			<label>Tipo Rol</label>
 			<select class="browser-default" id="selRolColClaro">
-	      <option value="0" selected>Todo</option>
+	      <option value="0" selected>Todos</option>
 	      <option value="1">Funcional</option>
 	      <option value="2">Desarrollador</option>
 	      <option value="3">Lider QA</option>
@@ -48,7 +49,8 @@
 	    </select>
 		</div>
 		<div class="col l10 m9 s8">
-			<input type="text" id="txtBuscar" placeholder="Buscar por nombre, celular, email, etc">
+			<label for="txtBuscar" class="esconder">Buscar</label>
+			<input type="text" id="txtBuscar" placeholder="Buscar por tipo rol nombre, celular o email">
 		</div>
 		<div class="col s12 pb70">
 			<table class="responsive-table striped">
