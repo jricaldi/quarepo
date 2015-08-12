@@ -34,6 +34,7 @@ helpSetViewMantDatos = function(input){
       Session.set("mant_datos_tipoRol", CONSTANTE.datosTipoRol);
       break;
     case 2:
-      Session.set("mant_datos_tipoRol", "noTemplate");
+      Session.set("mant_datos_tipoRol", CONSTANTE.noTemplate);
+      break;
   }
 }

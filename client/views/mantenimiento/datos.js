@@ -6,7 +6,7 @@ Template.datos.events({
 });
 
 Template.datos.onRendered(function(){
-  var input = this.$("#selDatos").val();
+  var input = Number(this.$("#selDatos").val());
   helpSetViewMantDatos(input);
 
 });
