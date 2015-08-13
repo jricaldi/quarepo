@@ -1,37 +1,9 @@
 <template name="colClaroNew">
-	<div class="row">
-		<form class="col s12 pb70">
-			<div class="row">
-				<div class="input-field col l6 s12 m8">
-					<input id="txtNombre" type="text" class="validate" required>
-					<label for="txtNombre">Nombres y Apellidos</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col l3 s12 m4 mb20">
-					<input id="txtRol" type="text" class="validate" required>
-					<label for="txtRol">Rol</label>
-				</div>
-				<div class="input-field col l3 s12 m4">
-					<input id="txtCelular" type="number" class="validate" maxlength="9" required>
-					<label for="txtCelular">Celular</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col l3 s12 m4 mb20">
-					<input id="txtEmail" type="email" class="validate" required>
-					<label for="txtEmail">Email</label>
-				</div>
-				<div class="input-field col l3 s12 m4">
-					<input id="txtEmpresa" type="text" class="validate" value="Claro" required>
-					<label for="txtEmpresa" class="active">Empresa</label>
-				</div>
-			</div>
-			<button id="submit" class="btn waves-effect waves-light" type="submit">Submit
-				<i class="material-icons right">send</i>
-			</button>
-		</form>
-	</div>
+	{{#if rwindow.screen 'lte' 'xsmall'}}
+	  {{> colClaroNew_xsmall}}
+	{{else}}
+		{{> colClaroNew_large}}
+	{{/if}}
 </template>
 
 <template name="colClaro">

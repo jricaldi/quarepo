@@ -183,3 +183,7 @@ ul.noRadius>li>a {
 .borderError{
   border-top: 1px solid red;
 }
+
+.selectAlign{
+  margin-top:-17px;
+}

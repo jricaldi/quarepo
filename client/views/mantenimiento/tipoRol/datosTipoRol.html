@@ -1,20 +1,17 @@
-<template name="tipoRolNew">
+<template name="datosTipoRolNew">
   <div class="row">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col l6 s12 m8">
+        <div class="input-field col l3 s6 m3">
           <input id="txtNombre" type="text" class="validate" required>
-          <label for="txtNombre">Nombre Rol</label>
+          <label for="txtNombre">Nombre</label>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col l3 s12 m4">
-          <input id="txtRol" type="text" class="validate" required>
-          <label for="txtRol">Estado</label>
-        </div>
-        <div class="input-field col l3 s12 m4">
-          <input id="txtCelular" type="number" class="valid  ate" maxlength="9" required>
-          <label for="txtCelular">Celular</label>
+        <div class="col l2 s6 m3 selectAlign">
+          <label>Opciones</label>
+          <select class="browser-default" id="selEstados">
+            <option value="1" selected>Activo</option>
+            <option value="2">Inactivo</option>
+          </select>
         </div>
       </div>
       <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
@@ -24,7 +21,7 @@
   </div>
 </template>
 
-<template name="tipoRol">
+<template name="datosTipoRol">
   <div class="row">
     {{> nuevoElemento}}
     <div class="col s12 m6 l6 pb70">

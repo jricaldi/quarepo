@@ -7,13 +7,6 @@ helpMongoData = function(doc){
   }
 };
 
-// helpGetModalTemplate = function(ruta){
-//   switch (ruta) {
-//     case "colClaro":
-//     return Template.colClaroNew;
-//   }
-// }
-
 helpOnlyNumbers = function(evt){
   var charCode = (evt.which) ? evt.which : event.keyCode
   if (charCode > 47 && charCode < 58){
@@ -29,12 +22,16 @@ helpSetStatusMsg = function(status,mensaje){
 
 
 helpSetViewMantDatos = function(input){
+  var rutaPagina = "";
   switch (input) {
     case 1:
-      Session.set("mant_datos_tipoRol", CONSTANTE.datosTipoRol);
+      rutaPagina = CONSTANTE.datosTipoRol;
+      Session.set("mant_datos_tipoRol", rutaPagina);
       break;
     case 2:
-      Session.set("mant_datos_tipoRol", CONSTANTE.noTemplate);
+      rutaPagina = CONSTANTE.datosServidores;
+      Session.set("mant_datos_tipoRol", rutaPagina);
       break;
   }
-}
+  Session.set("rutaPagina", rutaPagina);
+};

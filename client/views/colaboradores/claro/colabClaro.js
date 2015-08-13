@@ -29,10 +29,6 @@ Template.colClaroNew.events({
   }
 });
 
-Template.colClaroNew.onRendered(function(){
-  // console.log($(window).width());
-  // console.log($(document).width());
-});
 ////////////////////////////////////////////////////////////////////
 Template.colClaro.events({
   "keyup #txtBuscar" : function(e,t){
@@ -44,9 +40,6 @@ Template.colClaro.events({
       Session.set("txtBuscar", CONSTANTE.todo);
     }
   },
-  //TODO crear un modulo para agregar tipo de roles, insertar con los _id iguales a 1,2,3,4,5
-  // despues guardar solo el id en el campo rol de Colaboradores
-  //TODO averiguar como hacer un join entre las colecciones colaboradores y tipoRol
   "change #selRolColClaro" : function(e,t){
     var input = e.currentTarget.value;
     console.log(input);///
