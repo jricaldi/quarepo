@@ -1,12 +1,6 @@
 Router.route('/colaboradoresClaro',{
   name:'colClaro',
   waitOn: function () {
-    console.log("sub colClaro");
-    // var input = 'mau'
-    // var sub = Meteor.subscribe('listarColClaro');
-    // if (!Session.equals("txtBuscar", undefined)) {
-    //   sub.stop();
-    // }
     return Meteor.subscribe('listarColClaro');
   },
   data : function(){

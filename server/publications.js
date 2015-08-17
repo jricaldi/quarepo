@@ -10,20 +10,10 @@ Meteor.publish("listarColIbm", function () {
   return Colaboradores.find({tipo : "ibm"});
 });
 
-// Meteor.publish("listarColClaroFiltro", function(input){
-//   // var cadena = new RegExp(".*"+input+".*", "i");
-//   // console.log("por filtro: " + cadena.toString());
-//   // var datos = Colaboradores.find({$and : [
-//   //   {$or:
-//   //     [
-//   //       {nombre : cadena},
-//   //       {celular: cadena},
-//   //       {email :  cadena}
-//   //     ]
-//   //   },
-//   //   {tipo : "claro"}
-//   // ]});
-//   // console.log("count datos: " + datos.count());
-//   // return datos
-//   return helpFindColClaroFiltro(input);
-// });
+Meteor.publish("listarSequences", function(){
+  return helpFindSequences();
+});
+
+Meteor.publish("listarTiposRoles", function(){
+  return helpFindTipoRoles();
+});

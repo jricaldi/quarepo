@@ -19,3 +19,15 @@ helpFindColClaroFiltro = function(input){
 helpFindColClaroRol = function(input){
   return Colaboradores.find({rol : input});
 };
+
+helpFindSequences = function(){
+  return Sequences.find();
+}
+
+helpFindOneSequences = function(sequence){
+  return Sequences.findOne({_id: sequence});
+}
+
+helpFindTipoRoles = function(sequence){
+  return Roles.find();
+}

@@ -6,12 +6,13 @@ Esquemas.colaboradores = new SimpleSchema({
     },
     rol: {
         type: String,
-        label: "Rol"
+        label: "Rol",
+        max : 1
     },
     celular: {
         type: String,
         label: "Celular",
-        min: 9,
+        min:9,
         max:9
     },
     email: {

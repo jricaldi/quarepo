@@ -13,14 +13,12 @@ Template.colClaroNew.events({
     colClaro.empresa = t.$("#txtEmpresa").val();
     colClaro.tipo = CONSTANTE.claro;
     Meteor.call("insertarColClaro",colClaro,function(error,result){
-      console.log("resultado es : " + result);
-      console.log(error);
       if (error)
         if (error.reason)
           helpSetStatusMsg(CONSTANTE.error,MENSAJES.insertarColClaro_ERROR
-            + " - " + error.reason);
+          + " - " + error.reason);
         else
-        helpSetStatusMsg(CONSTANTE.error,MENSAJES.insertarColClaro_ERROR);
+          helpSetStatusMsg(CONSTANTE.error,MENSAJES.insertarColClaro_ERROR);
       else{
         helpSetStatusMsg(CONSTANTE.ok,MENSAJES.insertarColClaro_OK);
         Router.go(Session.get("rutaPagina").split(".").shift());
@@ -42,7 +40,7 @@ Template.colClaro.events({
   },
   "change #selRolColClaro" : function(e,t){
     var input = e.currentTarget.value;
-    console.log(input);///
+    console.log(input);
 
   }
 });

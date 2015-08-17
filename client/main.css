@@ -187,3 +187,10 @@ ul.noRadius>li>a {
 .selectAlign{
   margin-top:-17px;
 }
+
+.letraCapital{
+  text-transform: capitalize;
+}
+.pointer{
+  cursor: pointer;
+}

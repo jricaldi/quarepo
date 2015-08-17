@@ -7,8 +7,8 @@
           <label for="txtNombre">Nombre</label>
         </div>
         <div class="col l2 s6 m3 selectAlign">
-          <label>Opciones</label>
-          <select class="browser-default" id="selEstados">
+          <label>Estado</label>
+          <select class="browser-default" id="selEstado">
             <option value="1" selected>Activo</option>
             <option value="2">Inactivo</option>
           </select>
@@ -19,6 +19,8 @@
       </button>
     </form>
   </div>
+
+  <input type="hidden" id="data_sequence" value={{data_sequence}}>
 </template>
 
 <template name="datosTipoRol">
@@ -35,12 +37,14 @@
             <th data-field="eliminar" width="5%">Eliminar</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="letraCapital">
           {{#each roles}}
           <tr>
             <td>{{_id}}</td>
             <td>{{nombre}}</td>
             <td>{{estado}}</td>
+            <td class="mod pointer" data-id={{_id}}><i class="material-icons" >description</i></td>
+            <td class="del pointer" data-id={{_id}}><i class="material-icons">delete</i></td>
           </tr>
           {{/each}}
         </tbody>
