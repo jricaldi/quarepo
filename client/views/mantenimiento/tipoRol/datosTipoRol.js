@@ -36,7 +36,11 @@ Template.datosTipoRol.events({
   "click .del" : function(e,t){
     console.log("del");
     var data = [this._id];
-    helpExecuteMethod(false,"deleteTipoRol",data);
+    var option = confirm("Se elminará el tipo de rol: " + this.nombre.toUpperCase() +
+    ", ¿Está seguro?");
+    if (option) {
+      helpExecuteMethod(false,"deleteTipoRol",data);
+    }
   },
   "click .mod" :function(){
     console.log("mod");

@@ -6,7 +6,7 @@
           <input id="txtNombre" type="text" class="validate" required>
           <label for="txtNombre">Nombre</label>
         </div>
-        <div class="col l2 s6 m3 selectAlign">
+        <div class="col l2 m3 s6 selectAlign">
           <label>Estado</label>
           <select class="browser-default" id="selEstado">
             <option value="1" selected>Activo</option>
@@ -14,11 +14,14 @@
           </select>
         </div>
       </div>
-      <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
+      <button class="btn waves-effect waves-light" type="submit">Guardar
         <i class="material-icons right">send</i>
       </button>
-    </form>
-  </div>
+      <a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+      href="{{pathFor route='datos'}}">Cancelar
+      </a>
+  </form>
+</div>
 </template>
 
 <template name="datosTipoRolEdit">
@@ -29,7 +32,7 @@
           <input id="txtNombre" type="text" class="validate letraCapital" required>
           <label id="lblTxtNombre" for="txtNombre">Nombre</label>
         </div>
-        <div class="col l2 s6 m3 selectAlign">
+        <div class="col l2 m3 s6 selectAlign">
           <label>Estado</label>
           <select class="browser-default" id="selEstado">
             <option value="1" selected>Activo</option>
@@ -37,25 +40,28 @@
           </select>
         </div>
       </div>
-      <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
+      <button class="btn waves-effect waves-light" type="submit">Guardar
         <i class="material-icons right">send</i>
       </button>
-    </form>
-  </div>
+      <a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+      href="{{pathFor route='datos'}}">Cancelar
+      </a>
+  </form>
+</div>
 </template>
 
 <template name="datosTipoRol">
   <div class="row">
     {{> nuevoElemento}}
-    <div class="col s12 m6 l6 pb70">
+    <div class="col s12 m12 l7 pb70">
       <table class="responsive-table striped">
         <thead>
           <tr>
-            <th data-field="id" width="10%">Id</th>
-            <th data-field="nombre" width="40%">Nombre</th>
-            <th data-field="estado" width="40%">Estado</th>
-            <th data-field="editar" width="5%">Editar</th>
-            <th data-field="eliminar" width="5%">Eliminar</th>
+            <th data-field="id" width="15%">Id</th>
+            <th data-field="nombre" width="35%">Nombre</th>
+            <th data-field="estado" width="30%" class="center">Estado</th>
+            <th data-field="editar" width="10%" class="center">Editar</th>
+            <th data-field="eliminar" width="10%" class="center">Eliminar</th>
           </tr>
         </thead>
         <tbody class="letraCapital">
@@ -63,9 +69,9 @@
           <tr>
             <td>{{_id}}</td>
             <td>{{nombre}}</td>
-            <td>{{estadoTxt}}</td>
-            <td class="mod pointer" data-id={{_id}}><i class="material-icons" >description</i></td>
-            <td class="del pointer" data-id={{_id}}><i class="material-icons">delete</i></td>
+            <td class="center">{{estadoTxt}}</td>
+            <td class="mod pointer center"><i class="material-icons teal-text darken-4" >description</i></td>
+            <td class="del pointer center"><i class="material-icons red-text darken-2">delete</i></td>
           </tr>
           {{/each}}
         </tbody>
