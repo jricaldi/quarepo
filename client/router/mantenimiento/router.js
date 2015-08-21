@@ -14,6 +14,19 @@ Router.route('/datos/mantenimientoNuevoTipoRol',{
   }
 });
 
+Router.route('/datos/mantenimientoEditarTipoRol',{
+  name:'datosTipoRol.edit',
+  waitOn: function () {
+    return Meteor.subscribe('listarTiposRoles');
+  },
+  notFoundTemplate: 'sinDatosNoButton',
+  data : function () {
+    var datos = helpFindOneTipoRoles(Session.get("id"));
+    if(datos!=null)
+      return datos;
+  }
+});
+
 Router.route('/datos/mantenimientoNuevoServidores',{
   name:'datosServidores.new',
   waitOn: function () {

@@ -19,8 +19,29 @@
       </button>
     </form>
   </div>
+</template>
 
-  <!-- <input type="hidden" id="data_sequence" value={{data_sequence}}> -->
+<template name="datosTipoRolEdit">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col l3 s6 m3">
+          <input id="txtNombre" type="text" class="validate letraCapital" required>
+          <label id="lblTxtNombre" for="txtNombre">Nombre</label>
+        </div>
+        <div class="col l2 s6 m3 selectAlign">
+          <label>Estado</label>
+          <select class="browser-default" id="selEstado">
+            <option value="1" selected>Activo</option>
+            <option value="2">Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
 </template>
 
 <template name="datosTipoRol">
@@ -42,7 +63,7 @@
           <tr>
             <td>{{_id}}</td>
             <td>{{nombre}}</td>
-            <td>{{estado}}</td>
+            <td>{{estadoTxt}}</td>
             <td class="mod pointer" data-id={{_id}}><i class="material-icons" >description</i></td>
             <td class="del pointer" data-id={{_id}}><i class="material-icons">delete</i></td>
           </tr>

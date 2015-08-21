@@ -6,8 +6,8 @@ Meteor.publish("listarColClaro", function () {
   return helpFindColClaro();
 });
 
-Meteor.publish("listarColIbm", function () {
-  return Colaboradores.find({tipo : "ibm"});
+Meteor.publish("listarColIbm", function (){
+  return Colaboradores.find({tipo : CONSTANTE.ibm});
 });
 
 Meteor.publish("listarSequences", function(){

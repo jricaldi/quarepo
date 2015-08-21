@@ -22,12 +22,16 @@ helpFindColClaroRol = function(input){
 
 helpFindSequences = function(){
   return Sequences.find();
-}
+};
 
 helpFindOneSequences = function(sequence){
   return Sequences.findOne({_id: sequence});
-}
+};
 
 helpFindTipoRoles = function(sequence){
   return Roles.find();
-}
+};
+
+helpFindOneTipoRoles = function(id){
+  return Roles.findOne({_id : id});
+};

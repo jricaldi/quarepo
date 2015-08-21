@@ -42,14 +42,14 @@ helpExecuteMethod = function(retornar,method,data,mensajeOK,mensajeError){
     var mensajeError = method + "_ERROR";
   }
   Meteor.apply(method, data, function(error, result){
-    if(error){
-      helpSetStatusMsg(CONSTANTE.error,MENSAJES[mensajeError]
+      if(error){
+        helpSetStatusMsg(CONSTANTE.error,MENSAJES[mensajeError]
         + " - " + error.reason);
       }
       else {
         helpSetStatusMsg(CONSTANTE.ok,MENSAJES[mensajeOk]);
         if (retornar)
-          Router.go(Session.get("rutaPagina").split(".").shift());
+        Router.go(Session.get("rutaPagina").split(".").shift());
       }
     });
   };

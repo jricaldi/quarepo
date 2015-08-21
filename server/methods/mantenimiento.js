@@ -38,5 +38,8 @@ Meteor.methods({
         });
       }
     });
+  },
+  "updateDatosTipoRol" : function(tipoRolEnt){
+    Roles.update({_id:tipoRolEnt._id},{$set : tipoRolEnt});
   }
 });
