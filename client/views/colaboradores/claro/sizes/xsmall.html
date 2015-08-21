@@ -8,9 +8,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col s6">
-					<input id="txtRol" type="text" class="validate" required>
-					<label for="txtRol">Rol</label>
+				<div class="col s6">
+					<label>Tipo Rol</label>
+					<select class="browser-default" id="selRolColClaro">
+			      <option value="0" selected>Todos</option>
+						{{#each selTiposRol}}
+						<option value={{_id}} class="letraCapital">{{nombre}}</option>
+						{{/each}}
+			    </select>
 				</div>
 				<div class="input-field col s6">
 					<input id="txtCelular" type="text" class="validate" maxlength="9" required>

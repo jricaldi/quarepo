@@ -1,7 +1,8 @@
 Router.route('/colaboradoresClaro',{
   name:'colClaro',
   waitOn: function () {
-    return Meteor.subscribe('listarColClaro');
+    return [Meteor.subscribe('listarColClaro'),
+    Meteor.subscribe('listarTiposRoles')];
   },
   data : function(){
     var datos = helpMongoData(helpFindColClaro());
@@ -12,5 +13,8 @@ Router.route('/colaboradoresClaro',{
 });
 
 Router.route('/nuevoColaboradorClaro',{
-  name:'colClaro.new'
+  name:'colClaro.new',
+  waitOn: function () {
+    return Meteor.subscribe('listarTiposRoles');
+  }
 });

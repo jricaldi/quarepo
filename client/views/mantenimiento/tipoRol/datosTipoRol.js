@@ -23,10 +23,14 @@ Template.datosTipoRol.helpers({
     var _list = [];
     for (var i = 0; i < list.length; i++) {
       var doc = list[i];
-      if(doc.estado == 1)
+      if(doc.estado == 1){
         doc.estadoTxt = "Activado";
-      else
+        doc.estadoBol = true;
+      }
+      else{
         doc.estadoTxt = "Inactivo";
+        doc.estadoBol = false;
+      }
       _list.push(doc);
     }
     return _list;

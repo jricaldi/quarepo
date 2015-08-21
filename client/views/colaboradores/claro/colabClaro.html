@@ -13,11 +13,9 @@
 			<label>Tipo Rol</label>
 			<select class="browser-default" id="selRolColClaro">
 	      <option value="0" selected>Todos</option>
-	      <option value="1">Funcional</option>
-	      <option value="2">Desarrollador</option>
-	      <option value="3">Lider QA</option>
-				<option value="4">Usuario</option>
-				<option value="5">SOAP</option>
+				{{#each selTiposRol}}
+				<option value={{_id}} class="letraCapital">{{nombre}}</option>
+				{{/each}}
 	    </select>
 		</div>
 		<div class="col l10 m9 s8">

@@ -28,7 +28,9 @@ helpFindOneSequences = function(sequence){
   return Sequences.findOne({_id: sequence});
 };
 
-helpFindTipoRoles = function(sequence){
+helpFindTipoRoles = function(estado){
+  if(estado)
+    return Roles.find({estado : estado});
   return Roles.find();
 };
 

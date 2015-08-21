@@ -27,6 +27,14 @@ Template.colClaroNew.events({
   }
 });
 
+Template.colClaroNew.helpers({
+  selTiposRol: function(){
+    var roles = Roles.find({estado : "1"});
+    console.log(roles);
+    return helpFindTipoRoles(CONSTANTE.activo);
+  }
+});
+
 ////////////////////////////////////////////////////////////////////
 Template.colClaro.events({
   "keyup #txtBuscar" : function(e,t){
@@ -53,5 +61,12 @@ Template.colClaro.helpers({
     else{
       return helpFindColClaroFiltro(Session.get("txtBuscar"));
     }
+  },
+  selTiposRol: function(){
+    return helpFindTipoRoles(CONSTANTE.activo);
   }
+});
+
+Template.colClaro.onRendered(function(){
+
 });
