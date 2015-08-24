@@ -8,17 +8,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s6">
+				<div class="col s6 selectAlign">
 					<label>Tipo Rol</label>
 					<select class="browser-default" id="selRolColClaro">
-			      <option value="0" selected>Todos</option>
 						{{#each selTiposRol}}
 						<option value={{_id}} class="letraCapital">{{nombre}}</option>
 						{{/each}}
-			    </select>
+					</select>
 				</div>
 				<div class="input-field col s6">
-					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
+					<input id="txtCelular" type="text" class="validate" maxlength="15" required>
 					<label for="txtCelular">Celular</label>
 				</div>
 			</div>
@@ -34,9 +33,12 @@
 					<label for="txtEmpresa" class="active">Empresa</label>
 				</div>
 			</div>
-			<button id="submit" class="btn waves-effect waves-light" type="submit">Submit
+			<button id="submit" class="btn waves-effect waves-light" type="submit">Guardar
 				<i class="material-icons right">send</i>
 			</button>
-		</form>
-	</div>
+			<a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+			href="{{pathFor route='colClaro'}}">Cancelar
+		</a>
+	</form>
+</div>
 </template>
