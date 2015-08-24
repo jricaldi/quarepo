@@ -1,0 +1,81 @@
+<template name="datosEmpresaNew">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col l3 s6 m3">
+          <input id="txtNombre" type="text" class="validate" required>
+          <label for="txtNombre">Nombre</label>
+        </div>
+        <div class="col l2 m3 s6 selectAlign">
+          <label>Estado</label>
+          <select class="browser-default" id="selEstado">
+            <option value="1" selected>Activo</option>
+            <option value="2">Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit">Guardar
+        <i class="material-icons right">send</i>
+      </button>
+      <a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+      href="{{pathFor route='datos'}}">Cancelar
+      </a>
+  </form>
+</div>
+</template>
+
+<template name="datosEmpresaEdit">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col l3 s6 m3">
+          <input id="txtNombre" type="text" class="validate letraCapital" required>
+          <label id="lblTxtNombre" for="txtNombre">Nombre</label>
+        </div>
+        <div class="col l2 m3 s6 selectAlign">
+          <label>Estado</label>
+          <select class="browser-default" id="selEstado">
+            <option value="1" selected>Activo</option>
+            <option value="2">Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit">Guardar
+        <i class="material-icons right">send</i>
+      </button>
+      <a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+      href="{{pathFor route='datos'}}">Cancelar
+      </a>
+  </form>
+</div>
+</template>
+
+<template name="datosEmpresa">
+  <div class="row">
+    {{> nuevoElemento}}
+    <div class="col s12 m12 l7 pb70">
+      <table class="responsive-table striped">
+        <thead>
+          <tr>
+            <th data-field="id" width="15%">Id</th>
+            <th data-field="nombre" width="35%">Nombre</th>
+            <th data-field="estado" width="30%" class="center">Estado</th>
+            <th data-field="editar" width="10%" class="center">Editar</th>
+            <th data-field="eliminar" width="10%" class="center">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody class="letraCapital">
+          {{#each empresa}}
+          <tr class={{#unless estadoBol}}red-text bold{{/unless}}>
+            <td>{{_id}}</td>
+            <td>{{nombre}}</td>
+            <td class="center">{{estadoTxt}}</td>
+            <td class="mod pointer center"><i class="material-icons teal-text darken-4" >description</i></td>
+            <td class="del pointer center"><i class="material-icons red-text darken-2">delete</i></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>

@@ -26,12 +26,17 @@ helpSetViewMantDatos = function(input){
   switch (input) {
     case 1:
     rutaPagina = CONSTANTE.datosTipoRol;
-    Session.set("mant_datos_tipoRol", rutaPagina);
+    Session.set("mantDatos", rutaPagina);
     break;
     case 2:
-    rutaPagina = CONSTANTE.datosServidores;
-    Session.set("mant_datos_tipoRol", rutaPagina);
+    rutaPagina = CONSTANTE.datosServidor;
+    Session.set("mantDatos", rutaPagina);
     break;
+    case 3:
+    rutaPagina = CONSTANTE.datosEmpresa;
+    Session.set("mantDatos", rutaPagina);
+    break;
+
   }
   Session.set("rutaPagina", rutaPagina);
 };
@@ -41,6 +46,7 @@ helpExecuteMethod = function(retornar,method,data,mensajeOK,mensajeError){
     var mensajeOk = method + "_OK";
     var mensajeError = method + "_ERROR";
   }
+  console.log("antes de la funcion");
   Meteor.apply(method, data, function(error, result){
       if(error){
         helpSetStatusMsg(CONSTANTE.error,MENSAJES[mensajeError]

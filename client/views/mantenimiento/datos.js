@@ -13,6 +13,6 @@ Template.datos.onRendered(function(){
 
 Template.datos.helpers({
   nombreTemplate: function(){
-    return Session.get("mant_datos_tipoRol");
+    return Session.get("mantDatos");
   }
 });

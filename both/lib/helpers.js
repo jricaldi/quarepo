@@ -1,23 +1,39 @@
-helpFindColClaro = function(){
-  return Colaboradores.find({tipo : "claro"});
-};
-
-helpFindColClaroFiltro = function(input){
-  var cadena = new RegExp(".*" + input + ".*", "i");
-  return Colaboradores.find({$and : [
-    {$or:
-      [
-        {nombre : cadena},
-        {celular: cadena},
-        {email :  cadena}
-      ]
-    },
-    {tipo : "claro"}
-  ]});
-};
-
-helpFindColClaroRol = function(input){
-  return Colaboradores.find({rol : input});
+helpFindColaborador = function(tipo,filterTipoRol,txtBuscar){
+  if (!filterTipoRol && !txtBuscar) {
+    return Colaboradores.find({tipo: tipo});
+  }
+  else{
+    if (!filterTipoRol && txtBuscar) {
+      var cadena = new RegExp(".*" + txtBuscar + ".*", "i");
+      return Colaboradores.find({$and : [
+        {$or:
+          [
+            {nombre : cadena},
+            {celular: cadena},
+            {email :  cadena}
+          ]
+        },
+        {tipo : tipo}
+      ]});
+    }
+    if (filterTipoRol && !txtBuscar) {
+      return Colaboradores.find({tipo: tipo, rol: filterTipoRol});
+    }
+    if (filterTipoRol && txtBuscar) {
+      var cadena = new RegExp(".*" + txtBuscar + ".*", "i");
+      return Colaboradores.find({$and : [
+        {$or:
+          [
+            {nombre : cadena},
+            {celular: cadena},
+            {email :  cadena}
+          ]
+        },
+        {tipo : tipo},
+        {rol : filterTipoRol}
+      ]});
+    }
+  }
 };
 
 helpFindSequences = function(){
