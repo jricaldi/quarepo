@@ -19,5 +19,6 @@ Router.route('/nuevoColaboradorClaro',{
   name:'colClaro.new',
   waitOn: function () {
     return Meteor.subscribe('listarTiposRoles');
-  }
+  },
+  loadingTemplate : null
 });

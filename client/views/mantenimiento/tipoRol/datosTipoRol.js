@@ -6,7 +6,7 @@ Template.datosTipoRolNew.events({
     tipoRolEnt.estado = t.$("#selEstado").val();
 
     var data = [CONSTANTE.datosTipoRol,tipoRolEnt];
-    helpExecuteMethod(true,"insertarDatosTipoRol",data)
+    helpExecuteMethod(true,"insert_DatosTipoRol",data)
   }
 });
 
@@ -43,7 +43,7 @@ Template.datosTipoRol.events({
     var option = confirm("Se elminará el tipo de rol: " + this.nombre.toUpperCase() +
     ", ¿Está seguro?");
     if (option) {
-      helpExecuteMethod(false,"deleteTipoRol",data);
+      helpExecuteMethod(false,"delete_DatosTipoRol",data);
     }
   },
   "click .mod" :function(){
@@ -51,6 +51,10 @@ Template.datosTipoRol.events({
     Session.set("id",this._id);
     Router.go(Session.get("rutaPagina") + CONSTANTE.edit);
   }
+});
+
+Template.datosTipoRol.onRendered(function(){
+  Session.set("opcionMant","1");
 });
 //////////////////////////////////////////////
 Template.datosTipoRolEdit.onRendered(function(){
@@ -68,6 +72,6 @@ Template.datosTipoRolEdit.events({
     tipoRolEnt.nombre = t.$("#txtNombre").val().toLowerCase();
     tipoRolEnt.estado = t.$("#selEstado").val();
     var data = [tipoRolEnt];
-    helpExecuteMethod(true,"updateDatosTipoRol",data)
+    helpExecuteMethod(true,"update_DatosTipoRol",data)
   }
 });

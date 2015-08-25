@@ -11,7 +11,8 @@ Router.route('/datos/mantenimientoNuevoTipoRol',{
   name:'datosTipoRol.new',
   waitOn: function () {
     return Meteor.subscribe('listarSequences');
-  }
+  },
+  loadingTemplate : null
 });
 
 Router.route('/datos/mantenimientoEditarTipoRol',{
@@ -19,6 +20,7 @@ Router.route('/datos/mantenimientoEditarTipoRol',{
   waitOn: function () {
     return Meteor.subscribe('listarTiposRoles');
   },
+  loadingTemplate : null,
   notFoundTemplate: 'sinDatosNoButton',
   data : function () {
     var datos = helpFindOneTipoRoles(Session.get("id"));
@@ -27,32 +29,20 @@ Router.route('/datos/mantenimientoEditarTipoRol',{
   }
 });
 /////////////////////////////////////////////////////
-Router.route('/datos/mantenimientoNuevoServidores',{
-  name:'datosServidores.new',
-  waitOn: function () {
-    return Meteor.subscribe('listarSequences');
-  }
-});
-
-Router.route('/datos/mantenimientoEditarServidores',{
-  name:'datosServidores.edit',
-  waitOn: function () {
-    return Meteor.subscribe('listarServidores');
-  }
-});
-/////////////////////////////////////////////////////
 Router.route('/datos/mantenimientoNuevoEmpresa',{
-  name:'datosEmpresas.new',
+  name:'datosEmpresa.new',
   waitOn: function () {
     return Meteor.subscribe('listarSequences');
-  }
+  },
+  loadingTemplate : null
 });
 
 Router.route('/datos/mantenimientoEditarEmpresa',{
-  name:'datosEmpresas.edit',
+  name:'datosEmpresa.edit',
   waitOn: function () {
     return Meteor.subscribe('listarEmpresas');
   },
+  loadingTemplate : null,
   notFoundTemplate: 'sinDatosNoButton',
   data : function () {
     var datos = helpFindOneEmpresas(Session.get("id"));

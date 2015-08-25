@@ -1,4 +1,4 @@
-var colecciones = [Colaboradores, Sequences];
+var colecciones = [Colaboradores, Sequences, Empresas];
 
 for (var i = 0; i < colecciones.length; i++) {
   colecciones[i].allow({

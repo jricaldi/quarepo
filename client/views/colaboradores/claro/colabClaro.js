@@ -12,7 +12,7 @@ Template.colClaroNew.events({
     colClaro.empresa = t.$("#txtEmpresa").val();
     colClaro.tipo = CONSTANTE.claro;
     var data = [colClaro];
-    helpExecuteMethod(true,"insertarColClaro",data);
+    helpExecuteMethod(true,"insert_ColClaro",data);
   }
 });
 
@@ -66,7 +66,6 @@ Template.colClaro.helpers({
       return _list;
     },
     selTiposRol: function(){
-      console.log("helper");
       return helpFindTipoRoles(CONSTANTE.activo);
     }
   });

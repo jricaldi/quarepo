@@ -29,10 +29,6 @@ helpSetViewMantDatos = function(input){
     Session.set("mantDatos", rutaPagina);
     break;
     case 2:
-    rutaPagina = CONSTANTE.datosServidor;
-    Session.set("mantDatos", rutaPagina);
-    break;
-    case 3:
     rutaPagina = CONSTANTE.datosEmpresa;
     Session.set("mantDatos", rutaPagina);
     break;

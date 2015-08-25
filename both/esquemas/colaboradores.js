@@ -7,7 +7,8 @@ Esquemas.colaboradores = new SimpleSchema({
     rol: {
         type: String,
         label: "Rol",
-        max : 1
+        min: 1,
+        max : 2
     },
     celular: {
         type: String,
@@ -23,7 +24,8 @@ Esquemas.colaboradores = new SimpleSchema({
     empresa: {
         type: String,
         label: "Empresa",
-        max: 25
+        min: 1,
+        max:2
     },
     tipo:{
       type: String,
