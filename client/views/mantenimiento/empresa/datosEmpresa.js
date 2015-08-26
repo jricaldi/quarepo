@@ -54,6 +54,7 @@ Template.datosEmpresa.events({
 
 Template.datosEmpresa.onRendered(function(){
     Session.set("opcionMant","2");
+     AnimatedEach.attachHooks(this.find("#tabla"));
 });
 //////////////////////////////////////////////
 Template.datosEmpresaEdit.onRendered(function(){

@@ -10,3 +10,4 @@ iron:router
 ccorcos:transitioner
 aldeed:collection2
 gadicohen:reactive-window
+mizzao:animated-each

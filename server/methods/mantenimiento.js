@@ -1,7 +1,6 @@
 Meteor.methods({
   //////////////////////////////////////////////////////////////////
   "updateSequence":function(sequence){
-    console.log("update sequence");
     Sequences.update({_id: sequence},{$inc: {seq: 1}});
   },
   "rollback_updateSequence":function(sequence){
@@ -9,7 +8,6 @@ Meteor.methods({
   },
   //////////////////////////////////////////////////////////////////
   "insertarRol":function(tipoRolEnt){
-    console.log("insert tipoRolEnt");
     Roles.insert(tipoRolEnt);
   },
   "delete_DatosTipoRol" : function(id){
@@ -46,8 +44,6 @@ Meteor.methods({
   },
   //////////////////////////////////////////////////////////////////
   "insertarEmpresa":function(empresaEnt){
-    console.log("insert empresaEnt");
-    console.log(empresaEnt);
     Empresas.insert(empresaEnt);
   },
   "delete_DatosEmpresa" : function(id){

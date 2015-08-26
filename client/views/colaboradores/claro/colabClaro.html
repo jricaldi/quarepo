@@ -8,7 +8,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col l3 m4 s6 selectAlign">
+				<div class="input-field col l4 m6 s12">
+					<input id="txtEmail" type="email" class="validate" required>
+					<label for="txtEmail">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col l4 m5 s12">
+					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
+					<label for="txtCelular">Celular o Teléfono</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l3 m4 s12 selectAlign mb15">
 					<label>Tipo Rol</label>
 					<select class="browser-default letraCapital" id="selTipoRol">
 						{{#each selTipoRol}}
@@ -16,19 +28,10 @@
 						{{/each}}
 					</select>
 				</div>
-				<div class="input-field col l3 m4 s6">
-					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
-					<label for="txtCelular">Celular o Teléfono</label>
-				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col l3 m4 s12">
-					<input id="txtEmail" type="email" class="validate" required>
-					<label for="txtEmail">Email</label>
-				</div>
-				<div class="mb20 show-on-small hide-on-med-and-up">&nbsp;</div>
 				<div class="col l3 m4 s12 selectAlign">
-					<label>Tipo Rol</label>
+					<label>Empresa</label>
 					<select class="browser-default letraCapital" id="selEmpresa">
 						{{#each selEmpresa}}
 						<option value={{_id}}>{{nombre}}</option>
@@ -97,16 +100,16 @@
 <template name="colClaro">
 	<div class="row">
 		{{> nuevoElemento}}
-		<div class="col l2 m3 s4">
+		<div class="col l3 m3 s12">
 			<label>Tipo Rol</label>
-			<select class="browser-default" id="selRolColClaro">
+			<select class="browser-default letraCapital" id="selTipoRol">
 				<option value="0" selected>Todos</option>
-				{{#each selTiposRol}}
+				{{#each selTipoRol}}
 				<option value={{_id}} class="letraCapital">{{nombre}}</option>
 				{{/each}}
 			</select>
 		</div>
-		<div class="col l10 m9 s8">
+		<div class="col l9 m9 s12">
 			<label for="txtBuscar" class="esconder">Buscar</label>
 			<input type="text" id="txtBuscar" autofocus placeholder="Buscar por tipo rol nombre, celular o email">
 		</div>
@@ -128,7 +131,7 @@
 						<td class="letraCapital">{{rolTxt}}</td>
 						<td>{{celular}}</td>
 						<td>{{email}}</td>
-						<td>{{empresa}}</td>
+						<td class="letraCapital">{{empresaTxt}}</td>
 					</tr>
 					{{/each}}
 				</tbody>

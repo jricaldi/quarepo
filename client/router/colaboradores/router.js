@@ -17,7 +17,9 @@ Router.route('/colaboradoresClaro',{
 Router.route('/nuevoColaboradorClaro',{
   name:'colClaro.new',
   waitOn: function () {
-    return Meteor.subscribe('listarTiposRoles');
+    return [Meteor.subscribe('listarTiposRoles'),
+            Meteor.subscribe("listarEmpresas")
+          ];
   },
   loadingTemplate : "loadingBlanco",
   onBeforeAction: function(){
@@ -26,7 +28,8 @@ Router.route('/nuevoColaboradorClaro',{
       this.redirect("/colaboradoresClaro");
     }
     else if(!helpMongoData(helpFindEmpresas(CONSTANTE.activo))){
-      helpSetStatusMsg(CONSTANTE.error,MENSAJES.error_new_colab_roles);
+      console.log(helpFindEmpresas(CONSTANTE.activo).fetch());
+      helpSetStatusMsg(CONSTANTE.error,MENSAJES.error_new_colab_empresas);
       this.redirect("/colaboradoresClaro");
     }
     else {

@@ -17,8 +17,11 @@ Template.colClaroNew.events({
 });
 
 Template.colClaroNew.helpers({
-  selTiposRol: function(){
+  selTipoRol: function(){
     return helpFindTipoRoles(CONSTANTE.activo);
+  },
+  selEmpresa:function(){
+    return helpFindEmpresas(CONSTANTE.activo);
   }
 });
 
@@ -73,9 +76,6 @@ Template.colClaro.events({
     },
     selTipoRol: function(){
       return helpFindTipoRoles(CONSTANTE.activo);
-    },
-    selEmpresa:function(){
-      return helpFindEmpresas(CONSTANTE.activo);
     }
   });
 
