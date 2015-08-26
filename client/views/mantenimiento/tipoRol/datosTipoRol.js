@@ -55,6 +55,7 @@ Template.datosTipoRol.events({
 
 Template.datosTipoRol.onRendered(function(){
   Session.set("opcionMant","1");
+  AnimatedEach.attachHooks(this.find("#tabla"));
 });
 //////////////////////////////////////////////
 Template.datosTipoRolEdit.onRendered(function(){

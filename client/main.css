@@ -196,3 +196,7 @@ ul.noRadius>li>a {
 .pointer{
   cursor: pointer;
 }
+
+.bold500{
+  font-weight: 500;
+}

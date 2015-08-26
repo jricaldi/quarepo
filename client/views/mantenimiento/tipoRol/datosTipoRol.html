@@ -3,7 +3,7 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col l3 s6 m3">
-          <input id="txtNombre" type="text" class="validate" required>
+          <input id="txtNombre" type="text" class="validate" required autofocus>
           <label for="txtNombre">Nombre</label>
         </div>
         <div class="col l2 m3 s6 selectAlign">
@@ -29,7 +29,7 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col l3 s6 m3">
-          <input id="txtNombre" type="text" class="validate letraCapital" required>
+          <input id="txtNombre" type="text" class="validate letraCapital" required autofocus>
           <label id="lblNombre" for="txtNombre">Nombre</label>
         </div>
         <div class="col l2 m3 s6 selectAlign">
@@ -64,7 +64,7 @@
             <th data-field="eliminar" width="10%" class="center">Eliminar</th>
           </tr>
         </thead>
-        <tbody class="letraCapital">
+        <tbody class="letraCapital" id="tabla">
           {{#each roles}}
           <tr class={{#unless estadoBol}}red-text bold{{/unless}}>
             <td>{{_id}}</td>
