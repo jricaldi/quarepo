@@ -47,6 +47,7 @@ Meteor.methods({
   //////////////////////////////////////////////////////////////////
   "insertarEmpresa":function(empresaEnt){
     console.log("insert empresaEnt");
+    console.log(empresaEnt);
     Empresas.insert(empresaEnt);
   },
   "delete_DatosEmpresa" : function(id){
@@ -62,7 +63,7 @@ Meteor.methods({
     //Vericamos si el nombre del rol existe
     var cadena = new RegExp(empresaEnt.nombre, "i");
     if (Empresas.findOne({nombre:cadena})) {
-      throw new Meteor.Error("existeEmpresa", "El rol ya existe");
+      throw new Meteor.Error("existeEmpresa", "La empresa ya existe");
     }
 
     var res = helpFindOneSequences(sequence);

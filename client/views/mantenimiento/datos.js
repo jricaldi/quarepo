@@ -6,7 +6,9 @@ Template.datos.events({
 });
 
 Template.datos.onRendered(function(){
-  this.$("#selDatos").val(Session.get("opcionMant"));
+  if (Session.get("opcionMant")) {
+    this.$("#selDatos").val(Session.get("opcionMant"));
+  }
   var input = Number(this.$("#selDatos").val());
   helpSetViewMantDatos(input);
 

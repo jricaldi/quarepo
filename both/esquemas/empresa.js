@@ -1,4 +1,4 @@
-Esquemas.roles = new SimpleSchema({
+Esquemas.empresas = new SimpleSchema({
     nombre: {
         type: String,
         label: "Nombre",
@@ -14,10 +14,12 @@ Esquemas.roles = new SimpleSchema({
       type: String,
       label: "Domicilio",
       max:100,
+      optional: true
     },
     celular: {
         type: String,
         label: "Celular o Telefono",
-        max:15
+        max:15,
+        optional: true
     },
 });

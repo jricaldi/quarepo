@@ -1,9 +1,97 @@
 <template name="colClaroNew">
-	{{#if rwindow.screen 'lte' 'xsmall'}}
-	  {{> colClaroNew_xsmall}}
-	{{else}}
-		{{> colClaroNew_large}}
-	{{/if}}
+	<div class="row">
+		<form class="col s12 pb70">
+			<div class="row">
+				<div class="input-field col l6 m8 s12">
+					<input id="txtNombre" type="text" class="validate" required>
+					<label for="txtNombre">Nombres y Apellidos</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l3 m4 s6 selectAlign">
+					<label>Tipo Rol</label>
+					<select class="browser-default letraCapital" id="selTipoRol">
+						{{#each selTipoRol}}
+						<option value={{_id}}>{{nombre}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="input-field col l3 m4 s6">
+					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
+					<label for="txtCelular">Celular o Teléfono</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col l3 m4 s12">
+					<input id="txtEmail" type="email" class="validate" required>
+					<label for="txtEmail">Email</label>
+				</div>
+				<div class="mb20 show-on-small hide-on-med-and-up">&nbsp;</div>
+				<div class="col l3 m4 s12 selectAlign">
+					<label>Tipo Rol</label>
+					<select class="browser-default letraCapital" id="selEmpresa">
+						{{#each selEmpresa}}
+						<option value={{_id}}>{{nombre}}</option>
+						{{/each}}
+					</select>
+				</div>
+			</div>
+			<button id="submit" class="btn waves-effect waves-light" type="submit">Guardar
+				<i class="material-icons right">send</i>
+			</button>
+			<a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+			href="{{pathFor route='colClaro'}}">Cancelar
+		</a>
+	</form>
+</div>
+</template>
+
+<template name="colClaroEdit">
+	<div class="row">
+		<form class="col s12 pb70">
+			<div class="row">
+				<div class="input-field col l6 m8 s12">
+					<input id="txtNombre" type="text" class="validate" required>
+					<label for="txtNombre">Nombres y Apellidos</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l3 m4 s6 selectAlign">
+					<label>Tipo Rol</label>
+					<select class="browser-default letraCapital" id="selTipoRol">
+						{{#each selTipoRol}}
+						<option value={{_id}}>{{nombre}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="input-field col l3 m4 s6">
+					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
+					<label for="txtCelular">Celular o Teléfono</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col l3 m4 s12">
+					<input id="txtEmail" type="email" class="validate" required>
+					<label for="txtEmail">Email</label>
+				</div>
+				<div class="mb20 show-on-small hide-on-med-and-up">&nbsp;</div>
+				<div class="col l3 m4 s12 selectAlign">
+					<label>Tipo Rol</label>
+					<select class="browser-default letraCapital" id="selEmpresa">
+						{{#each selEmpresa}}
+						<option value={{_id}}>{{nombre}}</option>
+						{{/each}}
+					</select>
+				</div>
+			</div>
+			<button id="submit" class="btn waves-effect waves-light" type="submit">Guardar
+				<i class="material-icons right">send</i>
+			</button>
+			<a id="btnCancelar" class="btn waves-effect waves-light red darken-2"
+			href="{{pathFor route='colClaro'}}">Cancelar
+		</a>
+	</form>
+</div>
 </template>
 
 <template name="colClaro">
@@ -12,11 +100,11 @@
 		<div class="col l2 m3 s4">
 			<label>Tipo Rol</label>
 			<select class="browser-default" id="selRolColClaro">
-	      <option value="0" selected>Todos</option>
+				<option value="0" selected>Todos</option>
 				{{#each selTiposRol}}
 				<option value={{_id}} class="letraCapital">{{nombre}}</option>
 				{{/each}}
-	    </select>
+			</select>
 		</div>
 		<div class="col l10 m9 s8">
 			<label for="txtBuscar" class="esconder">Buscar</label>

@@ -4,14 +4,13 @@ Router.route('/colaboradoresClaro',{
     Session.set("filterTipoRol", undefined);
     Session.set("txtBuscar", undefined);
     return [Meteor.subscribe('listarColaboradores',CONSTANTE.claro),
-            Meteor.subscribe('listarTiposRoles')];
+            Meteor.subscribe('listarTiposRoles'),
+            Meteor.subscribe('listarEmpresas')
+          ];
   },
   data : function(){
     var datos = helpMongoData(helpFindColaborador(CONSTANTE.claro));
-    if(datos==null)
-      return {personas: datos};
-    else
-      return datos;
+    return datos;
   }
 });
 
@@ -20,5 +19,18 @@ Router.route('/nuevoColaboradorClaro',{
   waitOn: function () {
     return Meteor.subscribe('listarTiposRoles');
   },
-  loadingTemplate : null
+  loadingTemplate : "loadingBlanco",
+  onBeforeAction: function(){
+    if(!helpMongoData(helpFindTipoRoles(CONSTANTE.activo))){
+      helpSetStatusMsg(CONSTANTE.error,MENSAJES.error_new_colab_roles);
+      this.redirect("/colaboradoresClaro");
+    }
+    else if(!helpMongoData(helpFindEmpresas(CONSTANTE.activo))){
+      helpSetStatusMsg(CONSTANTE.error,MENSAJES.error_new_colab_roles);
+      this.redirect("/colaboradoresClaro");
+    }
+    else {
+      this.next();
+    }
+  }
 });

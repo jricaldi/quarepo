@@ -60,7 +60,7 @@ Template.datosTipoRol.onRendered(function(){
 Template.datosTipoRolEdit.onRendered(function(){
   var ent = this.data; //data que proviene del router
   this.$("#txtNombre").val(ent.nombre);
-  this.$("#lblTxtNombre").addClass("active");
+  this.$("#lblNombre").addClass("active");
   this.$("#selEstado").val(ent.estado);
 });
 

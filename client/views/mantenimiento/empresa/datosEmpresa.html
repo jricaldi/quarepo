@@ -8,7 +8,7 @@
         </div>
         <div class="col l2 m3 s6 selectAlign">
           <label>Estado</label>
-          <select class="browser-default" id="selEstado">
+          <select class="browser-default" id="selEstado" required>
             <option value="1" selected>Activo</option>
             <option value="2">Inactivo</option>
           </select>
@@ -20,7 +20,7 @@
           <label for="txtDomicilio">Domicilio</label>
         </div>
         <div class="input-field col l3 s6 m3">
-          <input id="txtCelular" type="text" class="validate">
+          <input id="txtCelular" type="text" class="validate" maxlength="15">
           <label for="txtCelular">Celular o Telefono</label>
         </div>
       </div>
@@ -39,8 +39,8 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col l3 s6 m3">
-          <input id="txtNombre" type="text" class="validate" required>
-          <label for="txtNombre">Nombre</label>
+          <input id="txtNombre" type="text" class="validate letraCapital" required>
+          <label id="lblNombre" for="txtNombre">Nombre</label>
         </div>
         <div class="col l2 m3 s6 selectAlign">
           <label>Estado</label>
@@ -53,11 +53,11 @@
       <div class="row">
         <div class="input-field col l3 s6 m3">
           <input id="txtDomicilio" type="text" class="validate">
-          <label for="txtDomicilio">Domicilio</label>
+          <label id="lblDomicilio" for="txtDomicilio">Domicilio</label>
         </div>
         <div class="input-field col l3 s6 m3">
           <input id="txtCelular" type="text" class="validate">
-          <label for="txtCelular">Celular o Telefono</label>
+          <label id="lblCelular" for="txtCelular">Celular o Telefono</label>
         </div>
       </div>
       <button class="btn waves-effect waves-light" type="submit">Guardar
@@ -73,15 +73,15 @@
 <template name="datosEmpresa">
   <div class="row">
     {{> nuevoElemento}}
-    <div class="col s12 m12 l7 pb70">
+    <div class="col s12 m12 l12 pb70">
       <table class="responsive-table striped">
         <thead>
           <tr>
-            <th data-field="id" width="10%">Id</th>
-            <th data-field="nombre" width="20%">Nombre</th>
-            <th data-field="estado" width="15%" class="center">Estado</th>
+            <th data-field="id" width="5%">Id</th>
+            <th data-field="nombre" width="15%">Nombre</th>
+            <th data-field="estado" width="10%" class="center">Estado</th>
             <th data-field="celular" width="15%" class="center">Celular</th>
-            <th data-field="domicilio" width="20%" class="center">Domicilio</th>
+            <th data-field="domicilio" width="35%" class="center">Domicilio</th>
             <th data-field="editar" width="10%" class="center">Editar</th>
             <th data-field="eliminar" width="10%" class="center">Eliminar</th>
           </tr>

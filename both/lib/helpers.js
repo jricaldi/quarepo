@@ -1,3 +1,11 @@
+helpFindSequences = function(){
+  return Sequences.find();
+};
+
+helpFindOneSequences = function(sequence){
+  return Sequences.findOne({_id: sequence});
+};
+////////////////////////////////////////////////////////////
 helpFindColaborador = function(tipo,filterTipoRol,txtBuscar){
   if (!filterTipoRol && !txtBuscar) {
     return Colaboradores.find({tipo: tipo});
@@ -35,15 +43,7 @@ helpFindColaborador = function(tipo,filterTipoRol,txtBuscar){
     }
   }
 };
-
-helpFindSequences = function(){
-  return Sequences.find();
-};
-
-helpFindOneSequences = function(sequence){
-  return Sequences.findOne({_id: sequence});
-};
-
+////////////////////////////////////////////////////////////
 helpFindTipoRoles = function(estado){
   if(estado)
     return Roles.find({estado : estado});
@@ -52,4 +52,14 @@ helpFindTipoRoles = function(estado){
 
 helpFindOneTipoRoles = function(id){
   return Roles.findOne({_id : id});
+};
+////////////////////////////////////////////////////////////
+helpFindEmpresas = function(estado){
+  if(estado)
+    return Empresas.find({estado : estado});
+  return Empresas.find();
+};
+
+helpFindOneEmpresas = function(id){
+  return Empresas.findOne({_id : id});
 };
