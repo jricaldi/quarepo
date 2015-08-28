@@ -26,5 +26,4 @@ Template.mainLayout.events({
 Template.mainLayout.onRendered(function(){
   $(".collapsible").collapsible();
   $(".dropdown-button").dropdown();
-  $("ul.tabs").tabs();
 });
