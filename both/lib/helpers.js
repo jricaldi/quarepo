@@ -43,6 +43,10 @@ helpFindColaborador = function(tipo,filterTipoRol,txtBuscar){
     }
   }
 };
+
+helpFindOneColaborador = function(id){
+  return Colaboradores.findOne({_id: id});
+};
 ////////////////////////////////////////////////////////////
 helpFindTipoRoles = function(estado){
   if(estado)

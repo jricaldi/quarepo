@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="input-field col l6 m8 s12">
 					<input id="txtNombre" type="text" class="validate" required autofocus>
-					<label for="txtNombre">Nombres y Apellidos</label>
+					<label id="lblNombre" for="txtNombre">Nombres y Apellidos</label>
 				</div>
 			</div>
 			<div class="row">
@@ -59,7 +59,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col l3 m4 s6 selectAlign">
+				<div class="input-field col l4 m6 s12">
+					<input id="txtEmail" type="email" class="validate" required>
+					<label for="txtEmail">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col l4 m5 s12">
+					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
+					<label for="txtCelular">Celular o Teléfono</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l3 m4 s12 selectAlign mb15">
 					<label>Tipo Rol</label>
 					<select class="browser-default letraCapital" id="selTipoRol">
 						{{#each selTipoRol}}
@@ -67,19 +79,10 @@
 						{{/each}}
 					</select>
 				</div>
-				<div class="input-field col l3 m4 s6">
-					<input id="txtCelular" type="text" class="validate" maxlength="9" required>
-					<label for="txtCelular">Celular o Teléfono</label>
-				</div>
 			</div>
 			<div class="row">
-				<div class="input-field col l3 m4 s12">
-					<input id="txtEmail" type="email" class="validate" required>
-					<label for="txtEmail">Email</label>
-				</div>
-				<div class="mb20 show-on-small hide-on-med-and-up">&nbsp;</div>
 				<div class="col l3 m4 s12 selectAlign">
-					<label>Tipo Rol</label>
+					<label>Empresa</label>
 					<select class="browser-default letraCapital" id="selEmpresa">
 						{{#each selEmpresa}}
 						<option value={{_id}}>{{nombre}}</option>
@@ -117,21 +120,25 @@
 			<table class="responsive-table striped">
 				<thead>
 					<tr>
-						<th data-field="nombre">Nombre</th>
-						<th data-field="rol">Rol</th>
-						<th data-field="celular">Celular</th>
-						<th data-field="email">Email</th>
-						<th data-field="empresa">Empresa</th>
+						<th data-field="nombre" width="30%">Nombre</th>
+						<th data-field="rol" width="10%" class="center">Rol</th>
+						<th data-field="celular" width="15%" class="center">Celular</th>
+						<th data-field="email" width="15%" class="center">Email</th>
+						<th data-field="empresa" width="10%" class="center">Empresa</th>
+						<th data-field="editar" width="10%" class="center">Editar</th>
+						<th data-field="eliminar" width="10%" class="center">Eliminar</th>
 					</tr>
 				</thead>
 				<tbody>
 					{{#each personas}}
 					<tr>
 						<td>{{nombre}}</td>
-						<td class="letraCapital">{{rolTxt}}</td>
-						<td>{{celular}}</td>
-						<td>{{email}}</td>
-						<td class="letraCapital">{{empresaTxt}}</td>
+						<td class="letraCapital center">{{rolTxt}}</td>
+						<td class="center">{{celular}}</td>
+						<td class="center">{{email}}</td>
+						<td class="letraCapital center">{{empresaTxt}}</td>
+						<td class="mod pointer center"><i class="material-icons teal-text darken-4" >description</i></td>
+						<td class="del pointer center"><i class="material-icons red-text darken-2">delete</i></td>
 					</tr>
 					{{/each}}
 				</tbody>
